@@ -1,0 +1,39 @@
+<ion-header-bar class="bar-light">
+	<h1 class="title">首页</h1>
+	<button class="button icon ion-refresh pull-right" ng-click="refresh()"></button>
+</ion-header-bar>
+<ion-view view-title="Instagram">
+	<ion-content>
+	    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()">
+	    </ion-refresher>
+		<div class="list card">
+			<div class="item" ng-repeat="item in items" style="padding:0px">
+					<div class="item item-avatar">
+						<img src="{{item.avatar}}">
+						<h2> {{item.name}}</h2>
+						<p>{{item.description}}</p>
+					</div>
+					<div class="item item-body">
+						<img class="full-image" src="{{item.picture}}">
+					</ion-item>
+					<div class="item tabs tabs-icon-left">
+						<a class="tab-item" href="#">
+      						<i class="icon ion-thumbsup"></i>
+      						喜欢
+    					</a>
+    					<a class="tab-item" href="#">
+      						<i class="icon ion-chatbox"></i>
+      						评论
+    					</a>
+    					<a class="tab-item" href="#">
+      						<i class="icon ion-share"></i>
+      						分享
+    					</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+
+
